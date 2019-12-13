@@ -1,68 +1,93 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project title: 
 
-## Available Scripts
+Stocknomics
 
-In the project directory, you can run:
+## Discreption 
 
-### `npm start`
+This application is required searching by the date and the symbol (company name) and the response coming back will include the stock market information (prices and volumes) in a daily bases
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## API Used
+https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=URALLLSYVMYC9IZ9 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Wireframes
 
-### `npm run build`
+direct Link: (https://i.imgur.com/jnV5pbR.jpg)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## MVP
 
-### `npm run eject`
+The Stocknomics App is an easy app for the user to get the daily stock market updates based of searching by the 
+company's symbol
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Goals
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application goal is to give the user an overview of how the market data updated daily for a fast and easy invesment 
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ ## API (URL queries, Website	Sample Query) : 
+ (https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=URALLLSYVMYC9IZ9)  
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## source: Alpha Vantage documentation
 
-## Learn More
+ (https://www.alphavantage.co/documentation/) 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Component Hierarchy
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Use this section to define your React components and the data architecture of your app.
+src
+|__ assets/
+      |__ data-tests
+      |__ fonts
+      |__ graphics
+      |__ images
+      |__ mockups
+|__ components/
+      |__ Header.jsx
+      |__ Form.jsx
+      |__ Volumes.jsx
+      |__ Charts.jsx
+      |__ Prices.jsx
+      |__ search.jsx
+      |__ Footer.jsx
+|__ services/
+      |__api-helper.js
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Component Breakdown
 
-### Analyzing the Bundle Size
+Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
+Component	Type	state	props	Description
+Header	functional ---	The header will contain the name of the app 
+ Form.jsx will     --- contain the serch boxes
+ Volumes.jsx will  --- render the daily volume 
+ Charts.jsx will   --- contain the market chart 
+ Prices.jsx will   --- contain a function to render the daily stock prices
+ search.jsx will   --- handle the symbol search function 
+Footer	functional --- The footer will show info about me and a link to my portfolio.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Header	functional --- 2hrs
+ Form.jsx will     --- 2hrs
+ Volumes.jsx will  --- 2-3 hrs
+ Charts.jsx will   --- 3-5hrs 
+ Prices.jsx will   --- 2-3hrs
+ search.jsx will   --- 2hrs
+Footer	functional --- 2hrs
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Post-MVP
 
-### Deployment
+use the text animation 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
+## Project Delivery
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+functions will be used are :
+
+ComponentDidMount
+onChange
+onSubmit
+

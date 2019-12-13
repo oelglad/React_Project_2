@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { stockInfo } from './services/api-helper';
+import Form from './components/Form'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+//API_KEY : URALLLSYVMYC9IZ9
+// https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=MSFT&apikey=URALLLSYVMYC9IZ9
+// https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=URALLLSYVMYC9IZ9
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      stocks: [],
+      symbol: ""
+
+    }
+  }
+  componentDidMount = async () => {
+    const resp = await stockInfo(this.state)
+    this.setState({
+      stocks: resp
+
+    })
+  }
+  render() {
+    console.log(this.state.stocks)
+    return (
+      
+      < div >
+      <Form />
+      </div >
+    );
+  }
+}
 export default App;
