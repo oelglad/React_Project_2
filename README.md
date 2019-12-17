@@ -39,7 +39,7 @@ Use this section to define your React components and the data architecture of yo
 src
 |__ assets/
       |__ data-tests
-      |__ fonts
+      |__ fonts - awsome
       |__ graphics
       |__ images
       |__ mockups

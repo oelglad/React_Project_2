@@ -1,9 +1,64 @@
-.App {
-  text-align: center;
+
+input {
+  width: 100px;
+  height: 20px;
+  border: black;
+border-block-style: bolder;
+  border-radius: 15px;;
+  background-color: maroon;
+  font-size: 14px;
+  color: wheat;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .search{
-  text-align: center;
+align-items: center;
   margin: 20px;
   padding:20px;
+  color: maroon;
+  font-family: fantasy;
+  font-size: 20px;
 }
+h1{
+  text-align: center;
+  font-family: cursive;
+  padding: 20px 0px 0px 0px;
+  margin:  30px 0px 0px 0px;
+  color: antiquewhite;
+}
+
+.rightStock{
+  display: flex;;
+  flex-wrap: wrap;
+  flex-direction: row;
+  color: maroon;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  justify-content: space-around;
+}
+  .lefttStock{
+ text-align: right;
+ margin: 20px;
+ color: maroon;
+ font-size: 14px;
+  }
+
+
+header{
+  background-color: #333333;
+}
+
+.Footer{
+  height:40px;
+  padding:0px;
+  text-align: right;
+  font-size: 10px;
+  font-style: bolder;
+  color: antiquewhite;
+}
+img{
+  width: 350px;
+  height: 200px;
+}
+

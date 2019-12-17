@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { stockInfo } from './services/api-helper';
-import Form from './components/Form'
+import PieChart from 'react-minimal-pie-chart';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Form from './components/Form';
+
+
 import './App.css';
 
 
@@ -12,25 +18,132 @@ class App extends Component {
     super(props);
     this.state = {
       stocks: [],
-      symbol: ""
-
+      symbols: ["MSFT", "NDAQ", "goog"],
+      rightnow: "MSFT",
+      volume: "",
+      date: "2019-12-10",
+      open: "",
+      high: "",
+      low: "",
+      close: "",
     }
   }
-  componentDidMount = async () => {
-    const resp = await stockInfo(this.state)
-    this.setState({
-      stocks: resp
 
+  componentDidMount = async () => {
+    // for(let i=0; i<this.state.symbols.length; i++){
+    // this.state.rightnow = this.state.symbols[i];
+    // }
+
+    const response = await stockInfo(this.state)
+    const dates = Object.keys(response.data["Time Series (Daily)"]);
+    this.setState({
+      rightnow: response.data["Meta Data"]["2. Symbol"],
+      volume: response.data["Time Series (Daily)"][this.state.date]["5. volume"],
+      open: response.data["Time Series (Daily)"][this.state.date]["1. open"],
+      high: response.data["Time Series (Daily)"][this.state.date]["2. high"],
+      low: response.data["Time Series (Daily)"][this.state.date]["3. low"],
+      close: response.data["Time Series (Daily)"][this.state.date]["4. close"]
     })
   }
+  handleChange = (e) => {
+    const name = e.target.name
+    e.preventDefault();
+    this.setState({
+      rightnow: e.target.value
+    })
+  }
+
+  handleClick = async (e) => {
+    e.preventDefault();
+    const response = await stockInfo(this.state)
+    const dates = Object.keys(response.data["Time Series (Daily)"]);
+    this.setState({
+      rightnow: response.data["Meta Data"]["2. Symbol"],
+      volume: response.data["Time Series (Daily)"][this.state.date]["5. volume"],
+      open: response.data["Time Series (Daily)"][this.state.date]["1. open"],
+      high: response.data["Time Series (Daily)"][this.state.date]["2. high"],
+      low: response.data["Time Series (Daily)"][this.state.date]["3. low"],
+      close: response.data["Time Series (Daily)"][this.state.date]["4. close"]
+    })
+  }
+
+
   render() {
-    console.log(this.state.stocks)
     return (
-      
-      < div >
-      <Form />
-      </div >
+
+      <div>
+        <Header />
+        <Form onClick={this.handleClick} onChange={this.handleChange} />
+       {this.state.open && 
+       <PieChart
+          data={[
+            { title: `open: ${this.state.open}`, value: 1, color: '#E38627' },
+            { title: `high: ${this.state.high}`, value: 2, color: '#C13C37' },
+            { title: `low: ${this.state.low}`, value: 3, color: '#6A2135' },
+          ]}
+          style={{width: "30%" }}
+          label={(labelProps) => {console.log(labelProps); return labelProps.data[0].percentage}}
+          labelPosition={50}
+          labelStyle={{
+            fill: '#121212',
+            fontFamily: 'sans-serif',
+            fontSize: '5px'
+          }}
+        />}
+        <div className="lefttStock">
+          <p>{this.state.date}</p>
+          {/* <h3>{this.state.stocks}</h3> */}
+        </div>
+
+        <div className="rightStock">
+
+          <div>
+            <p>Open</p><p>{this.state.open}</p>
+          </div>
+
+          <div>
+            <p>High</p><p> {this.state.high}</p>
+          </div>
+
+          <div>
+            <p>Low</p><p>{this.state.low}</p>
+          </div>
+
+          <div>
+            <p>Close</p><p>{this.state.close}</p>
+          </div>
+
+          <div>
+            <p>Volume</p><p> {this.state.volume}</p>
+          </div>
+
+        </div>
+        <Footer />
+      </div>
     );
   }
 }
 export default App;
+
+{/* <div>
+<Header />
+<Form onClick={this.handleClick} onChange={this.handleChange} />
+<div className="stockInfo">
+<div className="lefttStock">
+<p>Open</p>
+<p>High</p>
+<p>Low</p>
+<p>Close</p>
+<p>Volume</p>
+</div>
+<div className="rightStock">
+  <p>{this.state.date}</p>
+ <p>{this.state.open}</p>
+  <p> {this.state.high}</p>
+  <p>{this.state.low}</p>
+  <p>{this.state.close}</p>
+  <p>Volume</p><p> {this.state.volume}</p>
+  </div>
+</div >
+<Footer />
+</div> */}
