@@ -56,10 +56,13 @@ h1{
   height:60px;
   padding: 0px 0px 30px 0px;
 }
-p{
+nav, main{
   text-align: right;
+}
+p{
+  text-align: left;
   padding: 40px 0px 0px 0px;
-  font-size: 18px;
+  font-size: 20px;
   font-family: cursive;
 }
 .ManageHeader{
