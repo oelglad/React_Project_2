@@ -8,7 +8,7 @@ function Chart (props){
         <PieChart
         data={[
           { title: `open: ${props.open}`, value: Math.floor(props.open), color: '#4c8fb4' },
-          { title: `high: ${props}.high}`, value: Math.floor(props.high), color: '#ffff52' },
+          { title: `high: ${props.high}`, value: Math.floor(props.high), color: '#ffff52' },
           { title: `low: ${props.low}`, value: Math.floor(props.low), color: '#c4a7a4' },
         ]}
         className ="chartClass" style={{width: "30%" }}

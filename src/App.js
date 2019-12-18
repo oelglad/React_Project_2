@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Form from './components/Form';
 import About from './components/About';
 import Chart from './components/Chart';
+import ChartComponent from './components/ComponentChart';
 
 
 import './App.css';
@@ -25,7 +26,7 @@ class App extends Component {
       rightnow: "MSFT",
       volume: "",
       // date: ["2019-12-10", "2019-12-17", "2019-12-15"],
-      date: "2019-12-10",
+      date: "2019-12-17",
       open: "",
       high: "",
       low: "",
@@ -34,9 +35,6 @@ class App extends Component {
   }
 
   componentDidMount = async () => {
-    // for(let i=0; i<this.state.symbols.length; i++){
-    // this.state.rightnow = this.state.symbols[i];
-    // }
 
     const response = await stockInfo(this.state)
     const dates = Object.keys(response.data["Time Series (Daily)"]);
@@ -81,43 +79,28 @@ class App extends Component {
 
       <div>
         <nav>
-        <Link to="/about">About Page</Link>
+          <Link to="/about">About Page</Link>
         </nav>
         <main>
-        <Route path="/about" render={ () => <About/>} />
+          <Route path="/about" render={() => <About />} />
         </main>
         <Header />
         <p>Date: {this.state.date}</p>
         <div className="ManageChart">
         <img className="imgStyle" src="https://i.imgur.com/Ebx1fBN.jpg"></img>
-     </div>
-     <Chart open={this.state.open}
-     high={this.state.high}
-     low={this.state.low} />
-
-        <div className="rightStock">
-
-          <div>
-            <p>Open</p><p>{this.state.open}</p>
-          </div>
-
-          <div>
-            <p>High</p><p> {this.state.high}</p>
-          </div>
-
-          <div>
-            <p>Low</p><p>{this.state.low}</p>
-          </div>
-
-          <div>
-            <p>Close</p><p>{this.state.close}</p>
-          </div>
-
-          <div>
-            <p>Volume</p><p> {this.state.volume}</p>
-          </div>
-
         </div>
+        <Form />
+        <Chart open={this.state.open}
+          high={this.state.high}
+          low={this.state.low}
+        />
+        <ChartComponent
+          open={this.state.open}
+          high={this.state.high}
+          low={this.state.low}
+          close={this.state.close}
+          volume={this.state.volume}
+        />
         <Footer />
       </div>
     );
