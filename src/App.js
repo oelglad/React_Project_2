@@ -88,7 +88,7 @@ class App extends Component {
             { title: `high: ${this.state.high}`, value: Math.floor(this.state.high), color: '#ffff52' },
             { title: `low: ${this.state.low}`, value: Math.floor(this.state.low), color: '#c4a7a4' },
           ]}
-          className ="chartClass" style={{width: "25%" }}
+          className ="chartClass" style={{width: "30%" }}
            label={(labelProps) => labelProps.data.map((item,key) => 
               // console.log(item)
               Math.round(item.percentage)
