@@ -6,8 +6,7 @@ function Header (){
     return(
         <header>
            
-        <h1>Stocknomics</h1>
-            <img className="headerStyle" src="https://i.imgur.com/t2NUrdE.pngStocknomics"></img> 
+        <h1><img className="headerStyle" src="https://i.imgur.com/t2NUrdE.pngStocknomics"></img>Stocknomics</h1>
     
       </header>
     )
