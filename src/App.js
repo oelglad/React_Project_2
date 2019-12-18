@@ -78,9 +78,10 @@ class App extends Component {
 
       <div>
         <Header />
+        <p>Date: {this.state.date}</p>
         <Form onClick={this.handleClick} onChange={this.handleChange} />
         <div className="lefttStock">
-          <p>Date: {this.state.date}</p>
+      
           {/* <h3>{this.state.stocks}</h3> */}
         </div>
         <div className="ManageChart">
