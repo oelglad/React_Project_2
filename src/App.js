@@ -81,7 +81,8 @@ class App extends Component {
           <Link to="/about">About Page</Link>
         </nav>
         <main>
-          <Route path="/about" render={() => <About />} />
+          <Route exact path="/about" render={() => <About />} />
+          
         </main>
         <Header />
         <p>Date: {this.state.date}</p>
