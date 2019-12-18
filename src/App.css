@@ -40,6 +40,10 @@ h1{
   padding: 10px;
   text-align: center;
   justify-content: space-evenly;
+  letter-spacing: 5s;
+}
+.rightStock:hover{
+  transition: 1s;
 }
   .lefttStock{
  text-align: right;

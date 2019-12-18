@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Form from './components/Form';
 import About from './components/About';
+import Chart from './components/Chart';
 
 
 import './App.css';
@@ -89,41 +90,10 @@ class App extends Component {
         <p>Date: {this.state.date}</p>
         <div className="ManageChart">
         <img className="imgStyle" src="https://i.imgur.com/Ebx1fBN.jpg"></img>
-        {this.state.open && 
-        <PieChart
-          data={[
-            { title: `open: ${this.state.open}`, value: Math.floor(this.state.open), color: '#4c8fb4' },
-            { title: `high: ${this.state.high}`, value: Math.floor(this.state.high), color: '#ffff52' },
-            { title: `low: ${this.state.low}`, value: Math.floor(this.state.low), color: '#c4a7a4' },
-          ]}
-          className ="chartClass" style={{width: "30%" }}
-           label={(labelProps) => labelProps.data.map((item,key) => 
-              // console.log(item)
-              Math.round(item.percentage)
-           
-           )}
-           
-          //  label={(labelProps) => {console.log(labelProps); return ` ${Math.floor(labelProps.data[0].percentage)} %`}}
-          // labelPosition={50}
-          // labelStyle={{
-          //   fill: '#121212',
-          //   fontFamily: 'sans-serif',
-
-          labelPosition={50}
-          labelStyle={{
-            fill: '#121212',
-            fontFamily: 'sans-serif',
-            fontSize: '5px'
-          }}
-        />}
-        <Form onClick={this.handleClick} onChange={this.handleChange} />
-        <div className="lefttStock">
-      
-          {/* <h3>{this.state.stocks}</h3> */}
-        </div>
-      
-        
-        </div>
+     </div>
+     <Chart open={this.state.open}
+     high={this.state.high}
+     low={this.state.low} />
 
         <div className="rightStock">
 
