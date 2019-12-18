@@ -21,6 +21,7 @@ class App extends Component {
       symbols: ["MSFT", "NDAQ", "goog"],
       rightnow: "MSFT",
       volume: "",
+      // date: ["2019-12-10", "2019-12-17", "2019-12-15"],
       date: "2019-12-10",
       open: "",
       high: "",
@@ -36,13 +37,15 @@ class App extends Component {
 
     const response = await stockInfo(this.state)
     const dates = Object.keys(response.data["Time Series (Daily)"]);
+    console.log(dates)
     this.setState({
       rightnow: response.data["Meta Data"]["2. Symbol"],
       volume: response.data["Time Series (Daily)"][this.state.date]["5. volume"],
       open: response.data["Time Series (Daily)"][this.state.date]["1. open"],
       high: response.data["Time Series (Daily)"][this.state.date]["2. high"],
       low: response.data["Time Series (Daily)"][this.state.date]["3. low"],
-      close: response.data["Time Series (Daily)"][this.state.date]["4. close"]
+      close: response.data["Time Series (Daily)"][this.state.date]["4. close"],
+      date: dates[0],
     })
   }
   handleChange = (e) => {
@@ -63,26 +66,44 @@ class App extends Component {
       open: response.data["Time Series (Daily)"][this.state.date]["1. open"],
       high: response.data["Time Series (Daily)"][this.state.date]["2. high"],
       low: response.data["Time Series (Daily)"][this.state.date]["3. low"],
-      close: response.data["Time Series (Daily)"][this.state.date]["4. close"]
+      close: response.data["Time Series (Daily)"][this.state.date]["4. close"],
+      date: dates[0],
     })
   }
 
 
   render() {
+    console.log(this.state.low);
     return (
 
       <div>
         <Header />
         <Form onClick={this.handleClick} onChange={this.handleChange} />
-       {this.state.open && 
-       <PieChart
+        <div className="lefttStock">
+          <p>Date: {this.state.date}</p>
+          {/* <h3>{this.state.stocks}</h3> */}
+        </div>
+        <div className="ManageChart">
+        {this.state.open && 
+        <PieChart
           data={[
-            { title: `open: ${this.state.open}`, value: 1, color: '#E38627' },
-            { title: `high: ${this.state.high}`, value: 2, color: '#C13C37' },
-            { title: `low: ${this.state.low}`, value: 3, color: '#6A2135' },
+            { title: `open: ${this.state.open}`, value: Math.floor(this.state.open), color: '#4c8fb4' },
+            { title: `high: ${this.state.high}`, value: Math.floor(this.state.high), color: '#ffff52' },
+            { title: `low: ${this.state.low}`, value: Math.floor(this.state.low), color: '#c4a7a4' },
           ]}
-          style={{width: "30%" }}
-          label={(labelProps) => {console.log(labelProps); return labelProps.data[0].percentage}}
+          className ="chartClass" style={{width: "30%" }}
+           label={(labelProps) => labelProps.data.map((item,key) => 
+              // console.log(item)
+              Math.round(item.percentage)
+           
+           )}
+           
+          //  label={(labelProps) => {console.log(labelProps); return ` ${Math.floor(labelProps.data[0].percentage)} %`}}
+          // labelPosition={50}
+          // labelStyle={{
+          //   fill: '#121212',
+          //   fontFamily: 'sans-serif',
+
           labelPosition={50}
           labelStyle={{
             fill: '#121212',
@@ -90,9 +111,8 @@ class App extends Component {
             fontSize: '5px'
           }}
         />}
-        <div className="lefttStock">
-          <p>{this.state.date}</p>
-          {/* <h3>{this.state.stocks}</h3> */}
+
+        
         </div>
 
         <div className="rightStock">
