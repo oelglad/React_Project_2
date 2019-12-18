@@ -5,7 +5,6 @@ function Form(props) {
       <div>
           
       <form className="search" onSubmit={props.onClick}>
-      <img className="imgStyle" src="https://i.imgur.com/Ebx1fBN.jpg"></img>
       <p>Company</p>
       {/* <input type="text" name="0" onChange={props.onChange} placeholder="search date" name="date"/> */}
       <input type="text" name="0" onChange={props.onChange} placeholder="search company" name="rightnow"/>

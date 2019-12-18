@@ -79,11 +79,6 @@ class App extends Component {
       <div>
         <Header />
         <p>Date: {this.state.date}</p>
-        <Form onClick={this.handleClick} onChange={this.handleChange} />
-        <div className="lefttStock">
-      
-          {/* <h3>{this.state.stocks}</h3> */}
-        </div>
         <div className="ManageChart">
         {this.state.open && 
         <PieChart
@@ -113,6 +108,13 @@ class App extends Component {
           }}
         />}
 
+        <img className="imgStyle" src="https://i.imgur.com/Ebx1fBN.jpg"></img>
+        <Form onClick={this.handleClick} onChange={this.handleChange} />
+        <div className="lefttStock">
+      
+          {/* <h3>{this.state.stocks}</h3> */}
+        </div>
+      
         
         </div>
 
