@@ -5,7 +5,9 @@ import React from 'react';
 function Header (){
     return(
         <header>
-        <h1><img src="https://i.imgur.com/t2NUrdE.pngStocknomics"></img> Stocknomics</h1>
+           
+        <h1>Stocknomics</h1>
+            <img className="headerStyle" src="https://i.imgur.com/t2NUrdE.pngStocknomics"></img> 
     
       </header>
     )
