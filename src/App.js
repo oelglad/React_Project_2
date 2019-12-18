@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { stockInfo } from './services/api-helper';
 import PieChart from 'react-minimal-pie-chart';
+import { Route, Link } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Form from './components/Form';
+import About from './components/About';
 
 
 import './App.css';
@@ -77,6 +79,12 @@ class App extends Component {
     return (
 
       <div>
+        <nav>
+        <Link to="/about">About Page</Link>
+        </nav>
+        <main>
+        <Route path="/about" render={ () => <About/>} />
+        </main>
         <Header />
         <p>Date: {this.state.date}</p>
         <div className="ManageChart">
