@@ -25,7 +25,7 @@ class App extends Component {
       symbols: ["MSFT", "NDAQ", "goog"],
       rightnow: "MSFT",
       volume: "",
-      // date: ["2019-12-10", "2019-12-17", "2019-12-15"],
+      //date: ["2019-12-10", "2019-12-17", "2019-12-15"],
       date: "2019-12-17",
       open: "",
       high: "",
