@@ -10,7 +10,6 @@ import About from './components/About';
 import Chart from './components/Chart';
 import ChartComponent from './components/ComponentChart';
 
-
 import './App.css';
 
 

@@ -53,7 +53,7 @@ h1{
   }
 .headerStyle{
   width:100px;
-  height:100px;
+  height:60px;
   padding: 0px 0px 30px 0px;
 }
 p{
@@ -83,7 +83,7 @@ p{
 }
 body{
   width:100%;
-  background-color: white;
+  background-image: url("https://i.imgur.com/37btira.jpg");
 }
 
 
