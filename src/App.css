@@ -3,18 +3,16 @@ input {
   width: 100px;
   height: 20px;
   border: black;
-border-block-style: bolder;
-  border-radius: 15px;;
-  background-color: #ffc2fe;
+  border-style: solid;
+  background-color:white;
   font-size: 14px;
-  color: #3D2314;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .search{
   display: flex;
   justify-content: left;
-  padding: 10px 0px 0px 800px;
+  /* padding: 10px 0px 0px 800px; */
   color: #ffc2fe;
   font-family: fantasy;
   font-size: 20px;
@@ -26,7 +24,7 @@ border-block-style: bolder;
 a{
   font-family: cursive;
   font-size: 18px;
-  padding: 0px 20px;
+ text-align: left;
 }
 
 .rightStock{

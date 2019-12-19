@@ -106,6 +106,6 @@ class App extends Component {
 export default App;
 
 
-{/* <Form onClick={this.handleClick} onChange={this.handleChange} /> */}
+{/* <Form onClick={this.handleClick} onChange={this.handleChange} /> */ }
 
 
