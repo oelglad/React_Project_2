@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { stockInfo } from './services/api-helper';
-import { Route, Link } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -78,26 +78,33 @@ class App extends Component {
     return (
 
       <div>
-        <main>
-          <Route path="/about" render={() => <About />} />
-        </main>
         <Header />
-        <Form onClick={this.handleClick} onChange={this.handleChange} />
-        <Nav />
-        <p>Date: {this.state.date}</p>
-        <Chart
-          open={this.state.open}
-          high={this.state.high}
-          low={this.state.low}
-        />
-        <ChartComponent
-          open={this.state.open}
-          low={this.state.low}
-          high={this.state.high}
-          close={this.state.close}
-          volume={this.state.volume}
-        />
-        <Footer />
+          <main>
+          <Switch>
+              <Route path="/about" render={() =>  
+                <ChartComponent
+                  open={this.state.open}
+                  low={this.state.low}
+                  high={this.state.high}
+                  close={this.state.close}
+                  volume={this.state.volume}
+                />} 
+              />
+              <Route path="/" render={() =>
+                <div>
+                  <Form onClick={this.handleClick} onChange={this.handleChange} />
+                  <Nav />
+                  <p>Date: {this.state.date}</p>
+                  <Chart
+                    open={this.state.open}
+                    high={this.state.high}
+                    low={this.state.low}
+                  />
+                </div>
+              } />
+              </Switch>
+            </main>
+          <Footer />
       </div>
     );
   }
