@@ -10,6 +10,7 @@ import ChartComponent from './components/ComponentChart';
 import Chart from './components/Chart';
 
 import About from './components/About';
+import Result from './components/Result';
 
 
 import './App.css';
@@ -77,11 +78,11 @@ class App extends Component {
     console.log(this.state.low);
     return (
 
-      <div>
+      <div className="App">
         <Header />
           <main>
           <Switch>
-              <Route path="/about" render={() =>  
+              <Route path="/result" render={() =>  
                 <ChartComponent
                   open={this.state.open}
                   low={this.state.low}
