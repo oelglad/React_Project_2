@@ -5,7 +5,7 @@ input {
   border: black;
 border-block-style: bolder;
   border-radius: 15px;;
-  background-color: wheat;
+  background-color: #ffc2fe;
   font-size: 14px;
   color: #3D2314;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -15,7 +15,7 @@ border-block-style: bolder;
   display: flex;
   justify-content: left;
   padding: 10px 0px 0px 800px;
-  color: wheat;
+  color: #ffc2fe;
   font-family: fantasy;
   font-size: 20px;
 }
@@ -23,14 +23,11 @@ border-block-style: bolder;
   padding: 0px 800px 20px 20px;
  
 }
-/* h1{
-  text-align: center;
-  font-size: 50px;
-  font-family: Ma Shan Zheng;
-  margin-left: auto;
-  margin-right: auto;
-  color: black;
-} */
+a{
+  font-family: cursive;
+  font-size: 18px;
+  padding: 0px 20px;
+}
 
 .rightStock{
   display: flex;;
@@ -56,7 +53,7 @@ border-block-style: bolder;
   display: flex;
   justify-content: center;
     width:300px;
-    height:200px;
+    height:150px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -71,7 +68,7 @@ p{
   text-align: right;
   padding: 0px 20px 0px 0px;
   font-size: 20px;
-  color:  #3D2314;
+  color:  #8f0007;
   font-family: cursive;
 }
 /* .ManageHeader{
@@ -90,14 +87,21 @@ p{
 }
 .imgStyle{
   width: 800px;
-  height: 500px;
+  height: 300px;
   
 }
 body{
-  width:100%;
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
   /* background-image: url("https://i.imgur.com/37btira.jpg"); */
 }
-
+html {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  
+}
 
 .ManageChart{
   display: flex;;

@@ -79,31 +79,23 @@ class App extends Component {
 
       <div>
         <Header />
-        <Nav/>
-        {/* <p>Date: {this.state.date}</p> */}
+        <Nav />
         <div className="ManageChart">
-        <div ClassName="dateClass"><p>Date: {this.state.date}</p></div>
-        {/* <img className="imgStyle" src="https://i.imgur.com/Ebx1fBN.jpg"></img> */}
-        <Form />
-        <Chart open={this.state.open}
-          high={this.state.high}
-          low={this.state.low}
-        />
-         </div>
-        {/* <ChartComponent
+          <div ClassName="dateClass"><p>Date: {this.state.date}</p></div>
+          <Form />
+          <Chart open={this.state.open}
+            high={this.state.high}
+            low={this.state.low}
+          />
+        </div>
+
+        <Route exact path="/about" render={() => <ChartComponent
           open={this.state.open}
           high={this.state.high}
           low={this.state.low}
           close={this.state.close}
           volume={this.state.volume}
-        /> */}
-             <Route exact path="/about" render={() =><ChartComponent
-          open={this.state.open}
-          high={this.state.high}
-          low={this.state.low}
-          close={this.state.close}
-          volume={this.state.volume}
-          />} /> 
+        />} />
         <Footer />
       </div>
     );
@@ -111,25 +103,5 @@ class App extends Component {
 }
 export default App;
 
-{/* <div>
-<Header />
-<Form onClick={this.handleClick} onChange={this.handleChange} />
-<div className="stockInfo">
-<div className="lefttStock">
-<p>Open</p>
-<p>High</p>
-<p>Low</p>
-<p>Close</p>
-<p>Volume</p>
-</div>
-<div className="rightStock">
-  <p>{this.state.date}</p>
- <p>{this.state.open}</p>
-  <p> {this.state.high}</p>
-  <p>{this.state.low}</p>
-  <p>{this.state.close}</p>
-  <p>Volume</p><p> {this.state.volume}</p>
-  </div>
-</div >
-<Footer />
-</div> */}
+
+

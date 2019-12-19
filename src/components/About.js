@@ -3,7 +3,7 @@ import ChartComponent from './ComponentChart'
 
 const About =(props)=>{
 return (
-    <div> This is the about page.
+    <div> This show the search result for the company stock'a market
         <ChartComponent 
             open={props.open}
             high={props.high}
