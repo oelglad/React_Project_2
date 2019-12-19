@@ -19,6 +19,7 @@ form{
 }
 .chartClass{
   /* padding: 20px 400px 20px 20px; */
+  margin: 20px;
  
 }
 a{
@@ -85,6 +86,7 @@ p{
 .imgStyle{
   width: 600px;
   height: 300px;
+  padding: 60px 0px 0px 0px;
   
 }
 body{
