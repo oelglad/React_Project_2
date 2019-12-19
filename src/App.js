@@ -6,10 +6,11 @@ import { Route, Link } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Form from './components/Form';
-import About from './components/About';
-import Nav from './components/Nav'
-import Chart from './components/Chart';
 import ChartComponent from './components/ComponentChart';
+import Chart from './components/Chart';
+
+import About from './components/About';
+
 
 import './App.css';
 
@@ -25,8 +26,8 @@ class App extends Component {
       symbols: ["MSFT", "NDAQ", "goog"],
       rightnow: "MSFT",
       volume: "",
-      //date: ["2019-12-10", "2019-12-17", "2019-12-15"],
-      date: "2019-12-17",
+      // date: ["2019-12-10", "2019-12-17", "2019-12-15"],
+      date: "2019-12-10",
       open: "",
       high: "",
       low: "",
@@ -35,6 +36,9 @@ class App extends Component {
   }
 
   componentDidMount = async () => {
+    // for(let i=0; i<this.state.symbols.length; i++){
+    // this.state.rightnow = this.state.symbols[i];
+    // }
 
     const response = await stockInfo(this.state)
     const dates = Object.keys(response.data["Time Series (Daily)"]);
@@ -78,24 +82,28 @@ class App extends Component {
     return (
 
       <div>
+        <nav>
+          <Link to="/about">About Page</Link>
+        </nav>
+        <main>
+          <Route path="/about" render={() => <About />} />
+        </main>
         <Header />
-        <Nav />
-        <div className="ManageChart">
-          <div ClassName="dateClass"><p>Date: {this.state.date}</p></div>
-          <Form />
-          <Chart open={this.state.open}
-            high={this.state.high}
-            low={this.state.low}
-          />
-        </div>
-
-        <Route exact path="/about" render={() => <ChartComponent
-          open={this.state.open}
-          high={this.state.high}
-          low={this.state.low}
-          close={this.state.close}
-          volume={this.state.volume}
-        />} />
+        <Form onClick={this.handleClick} onChange={this.handleChange} />
+        <p>Date: {this.state.date}</p>
+        <Chart
+          data={[
+            { title: `open: ${this.state.open}`, value: Math.floor(this.state.open), color: '#4c8fb4' },
+            { title: `high: ${this.state.high}`, value: Math.floor(this.state.high), color: '#ffff52' },
+            { title: `low: ${this.state.low}`, value: Math.floor(this.state.low), color: '#c4a7a4' },
+          ]}/>
+        <ChartComponent 
+        open={this.state.open}
+        low={this.state.low}
+        high={this.state.high}
+        close={this.state.close}
+        volume={this.state.volume}
+        />
         <Footer />
       </div>
     );
@@ -103,5 +111,25 @@ class App extends Component {
 }
 export default App;
 
-
-
+{/* <div>
+<Header />
+<Form onClick={this.handleClick} onChange={this.handleChange} />
+<div className="stockInfo">
+<div className="lefttStock">
+<p>Open</p>
+<p>High</p>
+<p>Low</p>
+<p>Close</p>
+<p>Volume</p>
+</div>
+<div className="rightStock">
+  <p>{this.state.date}</p>
+ <p>{this.state.open}</p>
+  <p> {this.state.high}</p>
+  <p>{this.state.low}</p>
+  <p>{this.state.close}</p>
+  <p>Volume</p><p> {this.state.volume}</p>
+  </div>
+</div >
+<Footer />
+</div> */}
