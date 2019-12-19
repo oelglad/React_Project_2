@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Nav = () => {
   return (
-    <Link to="/about">About Page</Link>
+    <Link to="/about">Search Result</Link>
   )
 }
 

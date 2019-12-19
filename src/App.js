@@ -78,11 +78,8 @@ class App extends Component {
     return (
 
       <div>
-        <Nav/>
-        <main>
-          <Route exact path="/about" render={() => <About/>} />  
-        </main>
         <Header />
+        <Nav/>
         {/* <p>Date: {this.state.date}</p> */}
         <div className="ManageChart">
         <div ClassName="dateClass"><p>Date: {this.state.date}</p></div>
@@ -93,13 +90,20 @@ class App extends Component {
           low={this.state.low}
         />
          </div>
-        <ChartComponent
+        {/* <ChartComponent
           open={this.state.open}
           high={this.state.high}
           low={this.state.low}
           close={this.state.close}
           volume={this.state.volume}
-        />
+        /> */}
+             <Route exact path="/about" render={() =><ChartComponent
+          open={this.state.open}
+          high={this.state.high}
+          low={this.state.low}
+          close={this.state.close}
+          volume={this.state.volume}
+          />} /> 
         <Footer />
       </div>
     );
