@@ -4,8 +4,8 @@ import PieChart from 'react-minimal-pie-chart';
 function Chart(props) {
 
     return (
-        props.open && 
-         <PieChart
+        props.open &&
+        <PieChart
             data={[
                 { title: `open: ${props.open}`, value: Math.floor(props.open), color: '#ffc2fe' },
                 { title: `high: ${props.high}`, value: Math.floor(props.high), color: '#8f0018' },
@@ -26,9 +26,9 @@ function Chart(props) {
 
         />
 
-        
+
     )
-        
+
 }
 
 export default Chart;
