@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { stockInfo } from './services/api-helper';
-import PieChart from 'react-minimal-pie-chart';
 import { Route, Link } from 'react-router-dom';
 
 import Header from './components/Header';
@@ -36,10 +35,6 @@ class App extends Component {
   }
 
   componentDidMount = async () => {
-    // for(let i=0; i<this.state.symbols.length; i++){
-    // this.state.rightnow = this.state.symbols[i];
-    // }
-
     const response = await stockInfo(this.state)
     const dates = Object.keys(response.data["Time Series (Daily)"]);
     console.log(dates)
@@ -92,17 +87,16 @@ class App extends Component {
         <Form onClick={this.handleClick} onChange={this.handleChange} />
         <p>Date: {this.state.date}</p>
         <Chart
-          data={[
-            { title: `open: ${this.state.open}`, value: Math.floor(this.state.open), color: '#4c8fb4' },
-            { title: `high: ${this.state.high}`, value: Math.floor(this.state.high), color: '#ffff52' },
-            { title: `low: ${this.state.low}`, value: Math.floor(this.state.low), color: '#c4a7a4' },
-          ]}/>
-        <ChartComponent 
-        open={this.state.open}
-        low={this.state.low}
-        high={this.state.high}
-        close={this.state.close}
-        volume={this.state.volume}
+          open={this.state.open}
+          high={this.state.high}
+          low={this.state.low}
+        />
+        <ChartComponent
+          open={this.state.open}
+          low={this.state.low}
+          high={this.state.high}
+          close={this.state.close}
+          volume={this.state.volume}
         />
         <Footer />
       </div>
@@ -111,25 +105,7 @@ class App extends Component {
 }
 export default App;
 
-{/* <div>
-<Header />
-<Form onClick={this.handleClick} onChange={this.handleChange} />
-<div className="stockInfo">
-<div className="lefttStock">
-<p>Open</p>
-<p>High</p>
-<p>Low</p>
-<p>Close</p>
-<p>Volume</p>
-</div>
-<div className="rightStock">
-  <p>{this.state.date}</p>
- <p>{this.state.open}</p>
-  <p> {this.state.high}</p>
-  <p>{this.state.low}</p>
-  <p>{this.state.close}</p>
-  <p>Volume</p><p> {this.state.volume}</p>
-  </div>
-</div >
-<Footer />
-</div> */}
+
+{/* <Form onClick={this.handleClick} onChange={this.handleChange} /> */}
+
+
