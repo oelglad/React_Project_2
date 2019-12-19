@@ -18,7 +18,7 @@ form{
   font-size: 20px;
 }
 .chartClass{
-  padding: 0px 800px 20px 20px;
+  /* padding: 20px 400px 20px 20px; */
  
 }
 a{
@@ -83,7 +83,7 @@ p{
   background-color:  #3D2314;
 }
 .imgStyle{
-  width: 800px;
+  width: 600px;
   height: 300px;
   
 }
@@ -103,7 +103,7 @@ html {
 .ManageChart{
   display: flex;;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 40px;
   height:450px;
   background-image: url("https://i.imgur.com/Ebx1fBN.jpg");
