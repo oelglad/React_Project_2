@@ -81,7 +81,13 @@ class App extends Component {
           <Link to="/about">About Page</Link>
         </nav>
         <main>
-          <Route exact path="/about" render={() => <About />} />
+          <Route exact path="/about" render={() => <ChartComponent 
+            open={this.state.open}
+            high={this.state.high}
+            low={this.state.low}
+            close={this.state.close}
+            volume={this.state.volume}
+          />} />
           
         </main>
         <Header />
@@ -95,13 +101,6 @@ class App extends Component {
           low={this.state.low}
         />
          </div>
-        <ChartComponent
-          open={this.state.open}
-          high={this.state.high}
-          low={this.state.low}
-          close={this.state.close}
-          volume={this.state.volume}
-        />
         <Footer />
       </div>
     );

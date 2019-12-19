@@ -7,9 +7,9 @@ function Chart(props) {
         props.open && 
          <PieChart
             data={[
-                { title: `open: ${props.open}`, value: Math.floor(props.open), color: '#4c8fb4' },
-                { title: `high: ${props.high}`, value: Math.floor(props.high), color: '#ffff52' },
-                { title: `low: ${props.low}`, value: Math.floor(props.low), color: '#c4a7a4' },
+                { title: `open: ${props.open}`, value: Math.floor(props.open), color: '#ffc2fe' },
+                { title: `high: ${props.high}`, value: Math.floor(props.high), color: '#ffe8bd' },
+                { title: `low: ${props.low}`, value: Math.floor(props.low), color: '#2455ff' },
             ]}
             className="chartClass" style={{ width: "25%" }}
             //  label={(labelProps) => {console.log(labelProps); return ` ${Math.floor(labelProps.data.percentage)} %`}}
