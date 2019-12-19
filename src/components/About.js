@@ -1,7 +1,7 @@
 import React from 'react';
 import ChartComponent from './ComponentChart'
 
-const About =(props)=>{
+const About =()=>{
 return (
     <div> This is the about page.
       

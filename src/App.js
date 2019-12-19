@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Form from './components/Form';
 import About from './components/About';
+import Nav from './components/Nav'
 import Chart from './components/Chart';
 import ChartComponent from './components/ComponentChart';
 
@@ -77,9 +78,7 @@ class App extends Component {
     return (
 
       <div>
-        <nav>
-          <Link to="/about">About Page</Link>
-        </nav>
+        <Nav/>
         <main>
           <Route exact path="/about" render={() => <About/>} />  
         </main>
