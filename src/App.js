@@ -85,6 +85,7 @@ class App extends Component {
           
         </main>
         <Header />
+        <Form />
         <p>Date: {this.state.date}</p>
         <div className="ManageChart">
         <img className="imgStyle" src="https://i.imgur.com/Ebx1fBN.jpg"></img>
@@ -94,7 +95,6 @@ class App extends Component {
           low={this.state.low}
         />
          </div>
-        <Form />
         <ChartComponent
           open={this.state.open}
           high={this.state.high}
