@@ -1,19 +1,19 @@
 
 input {
-  width: 100px;
-  height: 20px;
+  /* width: 100px;
+  height: 20px; */
   border: black;
   border-style: solid;
   background-color:white;
   font-size: 14px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+form{
+  display: inline;
+}
 
 .search{
-  display: flex;
   justify-content: left;
-  /* padding: 10px 0px 0px 800px; */
-  color: #ffc2fe;
   font-family: fantasy;
   font-size: 20px;
 }
@@ -24,7 +24,6 @@ input {
 a{
   font-family: cursive;
   font-size: 18px;
- text-align: left;
 }
 
 .rightStock{
