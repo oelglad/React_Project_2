@@ -7,7 +7,7 @@ border-block-style: bolder;
   border-radius: 15px;;
   background-color: wheat;
   font-size: 14px;
-  color: brown;
+  color: #3D2314;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -20,7 +20,8 @@ border-block-style: bolder;
   font-size: 20px;
 }
 .chartClass{
-  padding: 40px;
+  padding: 20px 800px 20px 20px;
+ 
 }
 /* h1{
   text-align: center;
