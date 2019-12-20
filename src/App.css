@@ -43,7 +43,7 @@ input[type=submit] {
   margin-right: auto;
   margin-left: auto;
   width: 70%;
-  height: 200px;
+  height: 300px;
   text-shadow: 3px 2px gray;
   text-transform: capitalize;
   border: 1px solid #ccc;
@@ -168,23 +168,6 @@ html {
   color: white;
 }
 
-@media only screen and (max-width: 500px) {
-  .App {
-    background-color:#d7cfe8;
-  }
-  .Navgation {
-    background-color: #354;
-  }
-  a:hover {
-   background-color: blanchedalmond;
-  }
-  footer{
-    padding: 250px 0px 0px 0px;
-  }
-  .AboutClass{
-    height: 400px;
-  }
-}
 
 @media only screen and (max-width: 960px) {
   .App {
@@ -197,6 +180,27 @@ html {
     float: none;
     width: 100%;
   }
+  .AboutClass{
+    background-color: green;
+    height: unset;
+  }
 }
 
-
+@media only screen and (max-width: 500px) {
+  .App {
+    background-color:#d7cfe8;
+  }
+  .Navgation {
+    background-color: #354;
+  }
+  a:hover {
+   background-color: blanchedalmond;
+  }
+  footer{
+    padding: 150px 0px 0px 0px;
+  }
+  .AboutClass{
+    background-color: green;
+    height: unset;
+  }
+}
