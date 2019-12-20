@@ -14,7 +14,7 @@ function Chart(props) {
             { title: `low: ${props.low}`, value: Math.floor(props.low), color: '#2e5dff' },
           ]}
           className="chartClass" style={{ width: "30%" }}
-          label={(labelProps) => { console.log(labelProps); return ` ${Math.floor(labelProps.data[0].percentage)} %` }}
+          label={(labelProps) => { return ` ${Math.floor(labelProps.data[0].percentage)} %` }}
           // label={(labelProps) => labelProps.data.map((item, key) =>
           // (`${Math.floor(item.percentage) / 1000} %`)
           // (`${(item.percentage) / 1000} %`)

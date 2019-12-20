@@ -38,7 +38,6 @@ class App extends Component {
   componentDidMount = async () => {
     const response = await stockInfo(this.state)
     const dates = Object.keys(response.data["Time Series (Daily)"]);
-    console.log(dates)
     this.setState({
       rightnow: response.data["Meta Data"]["2. Symbol"],
       volume: response.data["Time Series (Daily)"][this.state.date]["5. volume"],
@@ -74,9 +73,7 @@ class App extends Component {
 
 
   render() {
-    console.log(this.state.low);
     return (
-
       <div className="App">
         <Header />
         <main>
