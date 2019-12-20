@@ -25,9 +25,7 @@ border: 3px solid rgb(63, 127, 191, 0.9);
 .Navgation{
   background-color: rgba(87, 80, 80, 0.9);
 }
-.AboutClass{
 
-}
 input[type=submit] {
   width: 100px;
   font-size: 50px;
@@ -38,19 +36,31 @@ input[type=submit] {
   letter-spacing: 2px;
   cursor: pointer;
   border-radius: 100px;
-  color: rgb(252, 252, 252);
-  background-color: rgba(87, 80, 80, 0.9);
+  color: darkblue;
+  background-color: #d7cfe8;
   border: 3px solid rgb(63, 127, 191, 0.9);
   /* border: 1px solid rgb(113, 113, 113, 0); */
   outline: none;
 }
-#overflowTest {
-  background: #4CAF50;
-  color: white;
-  padding: 15px;
-  width: 50%;
-  height: 100px;
-  overflow: scroll;
+.AboutClass {
+  border: 1px solid gray;
+  text-indent: 50px;
+  padding: 40px;
+  text-align: center;
+  letter-spacing: 3px;
+  background-color:   #d7cfe8;
+  text-indent: 50px;
+  line-height: 1.8;
+  direction: rtl;
+  word-spacing: 10px;
+  color: black;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 70%;
+  height: 200px;
+  text-shadow: 3px 2px gray;
+  text-transform: capitalize;
   border: 1px solid #ccc;
 }
 
@@ -105,7 +115,7 @@ a{
   display: flex;
   justify-content: center;
     width:300px;
-    height:250px;
+    height:200px;
     margin-left: auto;
     margin-right: auto;
 
@@ -115,7 +125,7 @@ a{
   display: flex;;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: #333;
+  background-color: #d7cfe8;
 }
 nav, main{
   text-align: left;
@@ -127,12 +137,13 @@ nav, main{
 .dateClass{
   display: flex;
   justify-content: left;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 p{
   text-align: right;
   padding: 0px 20px 0px 0px;
   font-size: 20px;
-  color: #2e5dff;
+  color: black;
   font-family: solid cursive;
 }
 /* .ManageHeader{
@@ -173,10 +184,12 @@ html {
 
 }
 .Footer{
-  padding: 20px;
+  margin: 60px 0px 0px 0px;
+  font-family: cursive;
   text-align: right;
-  background: rgba(87, 80, 80, 0.9);
-  color: black;
+  letter-spacing: 5s;
+  background:  #333;
+  color: white;
 }
 
 @media only screen and (max-width: 677px) {
