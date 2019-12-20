@@ -80,32 +80,36 @@ class App extends Component {
 
       <div className="App">
         <Header />
-          <main>
+        <main>
           <Switch>
-              <Route path="/result" render={() =>  
-                <ChartComponent
+            <Route path="/about" render={() => <About
+             />}
+           />
+
+            <Route path="/result" render={() =>
+              <ChartComponent
+                open={this.state.open}
+                low={this.state.low}
+                high={this.state.high}
+                close={this.state.close}
+                volume={this.state.volume}
+              />}
+            />
+            <Route path="/" render={() =>
+              <div>
+                <Form onClick={this.handleClick} onChange={this.handleChange} />
+                <Nav />
+                <p>Date: {this.state.date}</p>
+                <Chart
                   open={this.state.open}
-                  low={this.state.low}
                   high={this.state.high}
-                  close={this.state.close}
-                  volume={this.state.volume}
-                />} 
-              />
-              <Route path="/" render={() =>
-                <div>
-                  <Form onClick={this.handleClick} onChange={this.handleChange} />
-                  <Nav />
-                  <p>Date: {this.state.date}</p>
-                  <Chart
-                    open={this.state.open}
-                    high={this.state.high}
-                    low={this.state.low}
-                  />
-                </div>
-              } />
-              </Switch>
-            </main>
-          <Footer />
+                  low={this.state.low}
+                />
+              </div>
+            } />
+          </Switch>
+        </main>
+        <Footer />
       </div>
     );
   }

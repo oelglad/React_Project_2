@@ -45,8 +45,8 @@ a{
   display: flex;
   justify-content: left;
   font-family: cursive;
-  font-size: 18px;
-  color: wheat;
+  font-size: 24px;
+  color: #2e5dff;
 
 }
 
@@ -74,9 +74,14 @@ a{
   display: flex;
   justify-content: center;
     width:300px;
-    height:150px;
+    height:300px;
     margin-left: auto;
     margin-right: auto;
+}
+.Navgation{
+  display: flex;;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 nav, main{
   text-align: left;
@@ -89,8 +94,8 @@ p{
   text-align: right;
   padding: 0px 20px 0px 0px;
   font-size: 20px;
-  color: wheat;
-  font-family: cursive;
+  color: #2e5dff;
+  font-family: solid cursive;
 }
 /* .ManageHeader{
   display: flex;
@@ -104,22 +109,22 @@ p{
   font-size: 12px;
   font-style: bolder;
   color: #3D2314;
-  background-color:  wheat;
+  background-color:  #2e5dff;
 }
 .imgStyle{
   display: flex;
-  width: 400px;
+  width: 300px;
   height: 300px;
-  padding: 60px 0px 0px 0px;
+  /* padding: 60px 0px 0px 0px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
   
 }
 body{
   width:80%;
   margin-left: auto;
   margin-right: auto;
-  background-color:  #3D2314;
+  background-color:  white;
   /* background-image: url("https://i.imgur.com/37btira.jpg"); */
 }
 html {
@@ -133,8 +138,8 @@ html {
   display: flex;;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 40px;
-  height:450px;
+  /* padding: 40px;
+  height:450px; */
   background-image: url("https://i.imgur.com/Ebx1fBN.jpg");
 
 }
