@@ -5,12 +5,13 @@ function Chart(props) {
 
     return (
         <div className="ManageChart">
-<img className="imgStyle" src="https://i.imgur.com/Ebx1fBN.jpg"></img>
+{/* <img className="imgStyle" src="https://i.imgur.com/Ebx1fBN.jpg"></img> */}
+<img className="imgStyle" src="https://i.imgur.com/xUe35or.jpg"></img>
         {props.open &&
         <PieChart
             data={[
-                { title: `open: ${props.open}`, value: Math.floor(props.open), color: '#ffc2fe' },
-                { title: `high: ${props.high}`, value: Math.floor(props.high), color: '#d7cfe8' },
+                { title: `open: ${props.open}`, value: Math.floor(props.open), color: '#5cc743' },
+                { title: `high: ${props.high}`, value: Math.floor(props.high), color: '#ce331b' },
                 { title: `low: ${props.low}`, value: Math.floor(props.low), color: '#2e5dff' },
             ]}
             className="chartClass" style={{ width: "30%" }}
