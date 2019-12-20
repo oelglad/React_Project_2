@@ -96,7 +96,7 @@ class App extends Component {
               />}
             />
             <Route path="/" render={() =>
-              <div>
+              <div className="homeClass">
                 <Form onClick={this.handleClick} onChange={this.handleChange} />
                 <Nav />
                 <p>Date: {this.state.date}</p>

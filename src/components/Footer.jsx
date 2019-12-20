@@ -4,9 +4,9 @@ import React from 'react';
 
 function Footer (){
     return(
-        <header>
+        <footer>
         <p className="Footer">By Omnia</p>
-      </header>
+      </footer>
     )
 }
 export default Footer;
