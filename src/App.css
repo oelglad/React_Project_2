@@ -34,7 +34,6 @@ input[type=submit] {
   text-align: center;
   letter-spacing: 3px;
   background-color:   #d7cfe8;
-  text-indent: 50px;
   line-height: 1.8;
   direction: rtl;
   word-spacing: 10px;
@@ -42,13 +41,15 @@ input[type=submit] {
   margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
-  width: 70%;
+  width: 75%;
   height: 300px;
   text-shadow: 3px 2px gray;
   text-transform: capitalize;
   border: 1px solid #ccc;
 }
-
+div {
+align-content: center;
+}
 .search {
   display: flex;
   flex-direction: row;
@@ -68,6 +69,7 @@ a{
   color: white;
   letter-spacing: 2px;
   text-decoration: none;
+  transition: 1s;
 
 }
 
@@ -78,12 +80,12 @@ a{
   color: black;
   margin: 10px;
   padding: 10px;
-  text-align: center;
-  justify-content: space-evenly;
-  letter-spacing: 5s;
+  justify-items: center;
+  justify-content: space-around;
+  transition: 1s;
 }
 .rightStock:hover{
-  transition: 1s;
+  letter-spacing: 5px;
 }
 .lefttStock{
  text-align: right;
@@ -114,6 +116,7 @@ nav, main{
  a:hover {
   background-color: #d7cfe8;
   color: black;
+    letter-spacing: 8px;
 }
 .dateClass{
   display: flex;
@@ -182,13 +185,14 @@ html {
   }
   .AboutClass{
     background-color: green;
+    text-align: center;
     height: unset;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .App {
-    background-color:#d7cfe8;
+    background-color: #4d7f8c;
   }
   .Navgation {
     background-color: #354;

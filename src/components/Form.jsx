@@ -11,14 +11,19 @@ function Form(props) {
           <option value={props.rightnow}>MSFT</option>
           <option value={props.rightnow}>NDAQ</option>
           <option value={props.rightnow}>goog</option>
+          <option value={props.rightnow}>AAPL</option>
+          <option value={props.rightnow}>LEGH</option>
+          <option value={props.rightnow}>SPGI</option>
+          <option value={props.rightnow}>SP</option>
+          <option value={props.rightnow}>REI</option>
+          <option value={props.rightnow}>COST</option>
+          <option value={props.rightnow}>CSGS</option>
         </select>
-       
         <input type="submit" value="submit!"></input>
-        {/* <button onClick={props.onClick}>Breeds list</button> */}
       </form>
     </div>
   )
 }
 
 export default Form;
-{/* <button onClick={props.onClick}>Breeds list</button> */ }
+

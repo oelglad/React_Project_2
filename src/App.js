@@ -24,11 +24,10 @@ class App extends Component {
     super(props);
     this.state = {
       stocks: [],
-      symbols: ["MSFT", "NDAQ", "goog"],
+      symbols: ["MSFT", "NDAQ", "goog", "AAPL", "LEGH", "SPGI", "SP", "REI", "COST", "CSGS"],
       rightnow: "MSFT",
       volume: "",
-      // date: ["2019-12-10", "2019-12-17", "2019-12-15"],
-      date: "2019-12-10",
+      date: "2019-12-20",
       open: "",
       high: "",
       low: "",
@@ -83,8 +82,8 @@ class App extends Component {
         <main>
           <Switch>
             <Route path="/about" render={() => <About
-             />}
-           />
+            />}
+            />
 
             <Route path="/result" render={() =>
               <ChartComponent
@@ -117,6 +116,6 @@ class App extends Component {
 export default App;
 
 
-{/* <Form onClick={this.handleClick} onChange={this.handleChange} /> */ }
+
 
 

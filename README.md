@@ -19,8 +19,7 @@ direct Link: (https://i.imgur.com/jnV5pbR.jpg)
 
 ## MVP
 
-The Stocknomics App is an easy app for the user to get the daily stock market updates based of searching by the 
-company's symbol
+The Stocknomics App is an easy app for the user to get the daily stock market update based of searching"selecting from the drop down list" by the company's symbol
 
 ## Goals
 
@@ -45,11 +44,13 @@ src
       |__ mockups
 |__ components/
       |__ Header.jsx
+      |__ About.jsx
       |__ Form.jsx
       |__ Volumes.jsx
-      |__ Charts.jsx
-      |__ Prices.jsx
-      |__ search.jsx
+      |__ Chart.jsx
+      |__ ComponentChart.jsx
+      |__ Nav.jsx
+      |__ Result.jsx
       |__ Footer.jsx
 |__ services/
       |__api-helper.js
@@ -61,26 +62,32 @@ Use this section to go into further depth regarding your components, including b
 Component	Type	state	props	Description
 Header	functional ---	The header will contain the name of the app 
  Form.jsx will     --- contain the serch boxes
- Volumes.jsx will  --- render the daily volume 
- Charts.jsx will   --- contain the market chart 
- Prices.jsx will   --- contain a function to render the daily stock prices
- search.jsx will   --- handle the symbol search function 
-Footer	functional --- The footer will show info about me and a link to my portfolio.
+ Volumes.jsx will  --- render the  volume based on the company name search 
+ Chart.jsx will   --- handle the chart Component percentage for the 
+ Nav.jsx will   --- contain the navigation links to the other pages
+ Result .jsx will   ---  handle the API result values
+ ComponentChart.jsx ----  handle the (low, high, close) on hover contain the market chart 
+ Footer	--- The footer will show info about me and a link to my portfolio.
 
-Header	functional --- 2hrs
+Header	      --- 2hrs
+ About.jsx         ---3hrs
  Form.jsx will     --- 2hrs
  Volumes.jsx will  --- 2-3 hrs
- Charts.jsx will   --- 3-5hrs 
- Prices.jsx will   --- 2-3hrs
- search.jsx will   --- 2hrs
-Footer	functional --- 2hrs
-
-
+ Chart.jsx will    --- 3-5hrs 
+ Nav.jsx will      --- 2-3hrs
+ Result.jsx will   --- 2hrs
+ ComponentChart.jsx--- 5hrs
+ Footer.jsx	       --- 2hrs
+ Header.jsx        ---2hrs
+     
+     
+      
+      
 
 
 ## Post-MVP
 
-use the text animation 
+use the pie chart
 
 
 ## Project Delivery
@@ -88,6 +95,6 @@ use the text animation
 functions will be used are :
 
 ComponentDidMount
-onChange
-onSubmit
+handleClick
+handleSubmit
 
